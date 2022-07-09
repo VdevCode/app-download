@@ -96,8 +96,8 @@ header{
     display: flex;
     justify-content: space-between;
     background: var(--light-color);
-    padding: 8px;
-    width:44px;
+    padding: 6px;
+    width:40px;
     flex-direction: column;
     row-gap: 5px;
     cursor: pointer;
@@ -108,7 +108,7 @@ header{
     display: block;
     background-color: var(--text-color);
     height: 3px;
-    width: 30px;
+    width: 25px;
 }
 .move .line-header1{
     transform: rotate(-45deg) translate(-8px,-2px);
@@ -204,15 +204,16 @@ header{
     justify-content: flex-end;
 }
 .home-container img{
+    border-radius: 5px;
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     object-fit: cover;
     z-index: -1;
     justify-content: space-between;
     padding-left: 10px;
     padding-right: 10px;
+    
 }
 .home-text{
     padding-right: 4rem;
@@ -247,14 +248,17 @@ header{
 .heading-trending{
     display: flex;
     align-items: center;
-    margin-bottom: 1px;
+    margin-top: 5px;
+    
 }
 .heading-trending .bx{
     color: var(--main-color);
 }
 .heading-trending h1{
     font-size: 1rem;
+    font-weight: 300;
     margin-left: 0.3rem;
+    
 }
 .trending-content{
     padding: 0 10px;
@@ -262,7 +266,7 @@ header{
 }
 .trending-box img{
     width: 100%;
-    height: 80%;
+    height: 25vh;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -306,7 +310,7 @@ header{
 .trending--box-btn .bx{
     padding: 4px ;
     background-color: var(--text-color);
-    border-radius: 5px;
+    border-radius: 3px;
     font-weight: 400;
     font-size: 1rem;
     color: red;
@@ -336,4 +340,59 @@ header{
     background-color: var(--dark-color);
     color: white;
     font-weight: 400;
+}
+.footer-text{
+    text-align: center;
+}
+.footer-text h1{
+    font-size: 1rem;
+    color: var(--main-color);
+}
+.download-game{
+    padding: 0 10px;
+}
+.text-content-video h1{
+    font-size: 1rem;
+    color: white;
+    border-bottom: 1px solid var(--main-color);
+    text-align: center;
+}
+.video-container video{
+    width: 100%;
+    margin-top: 10vh;
+}
+.about--footer{
+    margin-top: 2rem;
+}
+.about--footer h2{
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--main-color);
+    display: inline-flex;
+    font-weight: 800;
+}
+.about--footer p{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    text-align: justify;
+}
+.screenshot-game h2{
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--main-color);
+    display: inline-flex;
+    font-weight: 800;
+    margin-top: 10px;
+}   
+.screenshots-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fir,minmax(250px,auto));
+    gap: 10px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 10px auto;
+
+}
+.screenshots-content img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
 }
