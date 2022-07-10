@@ -57,34 +57,50 @@ window.addEventListener('load',function(){
 let fullscreen;
 let fsEnter = document.getElementById('fullscr');
 fsEnter.addEventListener('click', function (e) {
-    e.preventDefault();
+    e.preventDefault()
     if (!fullscreen) {
         fullscreen = true;
         document.documentElement.requestFullscreen();
-        fsEnter.innerHTML = "Tắt Fullscreen";
+        fsEnter.innerHTML = "Tắt Fullscreen"
     }
     else {
-        fullscreen = false;
-        document.exitFullscreen();
-        fsEnter.innerHTML = "Bật Fullscreen";
+        fullscreen = false
+        document.exitFullscreen()
+        fsEnter.innerHTML = "Bật Fullscreen"
     }
-});
+})
 
 //progress-bar ( scroll)
 
 document.addEventListener('DOMContentLoaded',() =>{
  
-    const scrollBar = document.getElementById('value-progress')
-    document.addEventListener('scroll', () =>{
-    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop
-    const scrollHeight = document.documentElement.scrollHeight
-    const clientHeight = document.documentElement.clientHeight
-    
-    const percentPage = Math.floor((scrollTop / (scrollHeight - clientHeight) *100))
-    scrollBar.style.width = percentPage + "%"
-    
-  })
+  const scrollBar = document.getElementById('value-progress')
+  document.addEventListener('scroll', () =>{
+  const scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+  const scrollHeight = document.documentElement.scrollHeight
+  const clientHeight = document.documentElement.clientHeight
+  
+  const percentPage = Math.floor((scrollTop / (scrollHeight - clientHeight) *100))
+  scrollBar.style.width = percentPage + "%"
+  
+})
 })
 
 
+//load more
+const loadmore = document.querySelector('.button-loader');
+    let currentItems = 2;
+    loadmore.addEventListener('click', (e) => {
+        const elementList = [...document.querySelectorAll('.load-more-game .trending-container')];
+        for (let i = currentItems; i < currentItems + 2; i++) {
+            if (elementList[i]) {
+                elementList[i].style.display = 'block';
+            }
+        }
+        currentItems += 2;
 
+        // Load more button will be hidden after list fully loaded
+        if (currentItems >= elementList.length) {
+            event.target.style.display = 'none';
+        }
+    })
