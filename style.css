@@ -36,17 +36,52 @@ header{
     z-index: 10;
     padding: 0 10px;
 }
+#loader-website{
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background:#000 url(/image/loader.gif) no-repeat center center;
+    z-index: 100;
+    position: fixed;
+
+}
 .container{
     max-width: 1068px;
     margin: auto;
     width: 100%;
     overflow: hidden;
+    
 }
 .nav{
     justify-content: space-between;
     display: flex;
     padding: 16px 0;
     align-items: center;
+}
+.progress-bar{
+    width: 100%;
+    height: 2px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: rgb(78, 76, 76);
+    z-index: 1000;
+}
+.value-progress{
+    width: 20%;
+    height: 2px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: red;
+    position: absolute;
 }
 .logo--header{
     font-size: 1.4rem;
@@ -73,7 +108,31 @@ header{
     cursor: pointer;
     position: relative;
     color: yellow;
+    animation: ring 2s cubic-bezier(0,0,.64,1.4) infinite;
 }
+@keyframes ring {
+    15% {
+      transform: rotate(-20deg);
+    }
+    30% {
+      transform: rotate(20deg);
+    }
+    45% {
+      transform: rotate(-10deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    85% {
+      transform: rotate(-3deg);
+    }
+    90% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 .bell--icon--header::after{
     content: "";
     width: 5px;
@@ -147,6 +206,15 @@ header{
     text-align: right;
     padding-right: 2rem;
 }
+.bxs-home{
+    color: red;
+}
+.bxl-facebook-square{
+    color: rgb(83, 83, 240);
+}
+.menu--header-navbar li{
+    margin-bottom: 15px;
+}
 .menu--header-navbar a{
     font-size: 1.3rem;
     color: var(--text-color);
@@ -157,18 +225,45 @@ header{
     border-bottom: 4px solid  var(--main-color);
     font-size: 1rem;
 }
+.bxs-hand{
+    animation: ring 1.3s cubic-bezier(0,0,.64,1.4) infinite;
+}
+
+@keyframes ring {
+    15% {
+      transform: rotate(-20deg);
+    }
+    30% {
+      transform: rotate(20deg);
+    }
+    45% {
+      transform: rotate(-10deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    85% {
+      transform: rotate(-3deg);
+    }
+    90% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
 .notifycation{
     position: absolute;
     top: 110%;
     right: 15%;
     background: var(--light-color);
-    width: 300px;
+    
     border-radius: 5px;
-    display: flex;
     flex-direction: column;
     row-gap: 1rem;
     align-items: center;
     clip-path: circle(0% at 100% 0%);
+    padding: 5px;
 }
 .notifycation.active{
     clip-path: circle(144% at 100% 0%);
@@ -178,7 +273,7 @@ header{
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
-    justify-content: space-between;
+   
     padding: 10px;
     column-gap: 1rem;
     border-radius: 5px;
@@ -187,7 +282,7 @@ header{
     transition: 0.5s;
 }
 .notifycation--box:hover{
-    background-color: white;
+    background-color: rgb(75, 73, 73);
     color: black;
 }
 .notifycation--box .bx:hover{
@@ -195,6 +290,44 @@ header{
 }
 .notifycation--box .bx{
     color: yellow;
+}
+.notifycation-rank{
+    display: flex;
+    align-items: center;
+}
+.notifycation-rank .bx{
+    color: red !important;
+}
+.text-notify-rank{
+    margin-left: 15px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.time-date{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    background:  rgb(20, 20, 20);
+    padding: 5px;
+    border-radius: 4px;
+    
+}
+.date-sun{
+    color: orange;
+}
+.date-afternoon{
+    color: black;
+}
+.date-night{
+    color: yellow;
+    align-items: center;
+}
+.time-date h1{
+    font-size: 1rem;
+    font-weight: 30;
+    text-align: center;
+    align-items: center;
 }
 .home-container{
     position: relative;
@@ -225,6 +358,7 @@ header{
     text-transform: uppercase;
     color: white;
     margin-bottom: 10px;
+    
 }
 .text-btn{
     background: var(--main-color);
@@ -280,10 +414,15 @@ header{
 
     border-radius: 0.5rem;
 }
+.date-afternoon{
+    color:white;
+}
 .trending-box .trending-text h2{
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 0.8rem;
+    border-bottom: 2px solid red;
+    display: inline-flex;
 }
 .trending--rating--download{
     display: flex;
@@ -309,22 +448,20 @@ header{
 }
 .trending--box-btn .bx{
     padding: 4px ;
-    background-color: var(--text-color);
+   
     border-radius: 3px;
     font-weight: 400;
     font-size: 1rem;
-    color: red;
-}
-.trending--box-btn .bx:hover{
-    background-color: var(--dark-color);
-    color: white;
+    border: none;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    color: var(--text-color)    ;
 }
 .introduce-download {
     color: var(--main-color);
     text-align: center;
     font-size: 1.2rem;
     position: fixed;
-        position: relative;
     height: 500px;
     display: flex;
     align-items: center;
@@ -395,4 +532,86 @@ header{
     width: 100%;
     height: 30vh;
     object-fit: cover;
+}
+.text-ranked {
+    width: 100%;
+    height: 6vh;
+    background-color: rgb(8, 8, 10);
+    padding: 0 10px;
+}
+.text-ranked h1{
+    margin-top: 13vh;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.table-ranked{
+    width: 100%;
+    height: 70vh;
+    margin-top: 10px;
+    right: 0;
+    left: 0;
+    background: black;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.ranked{
+    padding: 0 10px;
+}
+.top-ranked-game{
+    margin-top: 20px;
+    width: 70%;
+    margin-left: 20%;
+    justify-content: space-between;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    
+}
+.top-ranked-game h1{
+    font-size: 1rem;
+}
+.image-ranked{
+   
+    margin-left: 20%;
+}
+.image-ranked img{
+    border-radius: 5px;
+    width: 120px;
+    
+}
+.top-ranked-game-1{
+    color: red ;
+}
+.top-ranked-game-2{
+    color: yellow ;
+}
+.top-ranked-game-3{
+    color: blue;
+}
+.full-scr{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.full-scr h1{
+    font-size: 1.2rem;
+    color: var(--main-color);
+    margin-left: 4px;
+}
+.full-scr .bx{
+    font-size: 1.2rem;
+    color: yellow;
+}
+@media (max-width:400px) {
+    .menu--header img{
+        display: none;
+    }
+    .menu--header-navbar{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 80%;
+        
+    }
 }

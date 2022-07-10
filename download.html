@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/rank.html">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Download</title>
 </head>
 <body>
+
+  
     <header>
         <div class="nav container">
             <a href="/index.html" class="logo--header" >STORE<span>GAME</span></a>
             
             <div class="icon--header">
-                <i class='bx bx-bell bell--icon--header' id="bell-icon" ></i>
+                <i class='bx bxs-bell bell--icon--header' id="bell-icon" ></i>
                 <a href="/download.html"><i class='bx bxs-download download-icon--header'></i></a>
                 <div class="menu--icon--header">
                     <div class="line-header1"></div>
@@ -35,9 +39,15 @@
             <div class="notifycation">
                 <div class="notifycation--box">
                     <i class='bx bxs-hand'></i>
-                    <p>Xin chào bạn đã đến website </p>
+                    <p>hello bro !!! </p>
                 </div>
-                
+                 <div class="notifycation--box">
+                    <a href="/rank.html" class="notifycation-rank">
+                        <i class='bx bxs-window-alt'></i>
+                        <h1 class="text-notify-rank">Bảng xếp hạng game(HOT)</h1>
+                    </a>
+                </div>
+               
             </div>
            
         </div>
@@ -59,7 +69,9 @@
             </div>
             <div class="screenshot-game">
                 <h2>ScreenShots</h2>
-                <div class="screenshots-content">
+                <div class="screenshots-content " data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
                     <img src="/image/imgContent1.jpg" alt="">
                     <img src="/image/imgContent2.jpg" alt="">
                     <img src="image/imgContent3.jpg" alt="">
@@ -68,5 +80,9 @@
        </section>
 
     <script src="/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

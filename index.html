@@ -8,16 +8,27 @@
     <link rel="stylesheet" href="/swiper-bundle.min.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/download.html">
+    <link rel="stylesheet" href="/rank.html">
     <title>Web Download Game</title>
 </head>
 <body>
+        <!-- scrollbar progress -->
+        <div class="progress-bar" id="progress-bar">
+            <div class="value-progress" style="width: 0%;" id="value-progress"></div>
+        </div>
+        <!-- phàn loader  -->
+        <div id="loader-website">
+
+        </div>
+
         <!-- phần header -->
+
         <header>
-            <div class="nav container">
+            <div class="nav container ">
                 <a href="/index.html" class="logo--header" >STORE<span>GAME</span></a>
                 
                 <div class="icon--header">
-                    <i class='bx bx-bell bell--icon--header' id="bell-icon" ></i>
+                    <i class='bx bxs-bell bell--icon--header' id="bell-icon" ></i>
                     <a href="/download.html"><i class='bx bxs-download download-icon--header'></i></a>
                     <div class="menu--icon--header">
                         <div class="line-header1"></div>
@@ -28,17 +39,27 @@
                 <div class="menu--header">
                     <img src="/image/imgHeader.jpg" class="menu--header-img" alt="">
                     <div class="menu--header-navbar">
-                        <li><a href="index.html">Trang Chủ</a></li>
-                        <li><a href="">Game Nổi Bật</a></li>
-                        <li><a href="">Game Mới </a></li>
+                        <li><a href="index.html"><i class='bx bxs-home' ></i> Trang Chủ</a></li>
+                        <li><a href="#trending">Game Nổi Bật</a></li>
+                        <li><a href="#new">Game Mới </a></li>
                         <li><a href="">Game Hành Động</a></li>
-                        <li><a href="">Liên Hệ Chúng Tôi</a></li>
+                        <li><a href=""><i class='bx bxl-facebook-square' ></i> Liên Hệ Chúng Tôi</a></li>
+                        <div class="full-scr" id="fullscr">
+                            <i class='bx bx-fullscreen'></i>
+                            <h1>Full Screen</h1>
+                        </div>
                     </div>
                 </div>
                 <div class="notifycation">
                     <div class="notifycation--box">
                         <i class='bx bxs-hand'></i>
-                        <p>Xin chào bạn đã đến website </p>
+                        <p>hello bro !!! </p>
+                    </div>
+                     <div class="notifycation--box">
+                        <a href="/rank.html" class="notifycation-rank">
+                            <i class='bx bxs-window-alt'></i>
+                            <h1 class="text-notify-rank">Bảng xếp hạng game(HOT)</h1>
+                        </a>
                     </div>
                    
                 </div>
@@ -50,6 +71,9 @@
 
     <!-- body--image -->
     <section class="home-container container" id="home">
+        <div class="time-date">
+            <h1>DEMO</h1>
+        </div>
         <img src="/image/imgPubg.jpg" alt="">
         <div class="home-text">
             <h1>CITY OF THE <br>FUTURE</br></h1>
@@ -191,7 +215,7 @@
 
     </section>
 
-    <section class="trending-container container" id="trending">
+    <section class="trending-container container" id="new">
         <div class="heading-trending">
             <i class='bx bxl-slack-old'></i>
             <h1>TOP GAME NEW </h1>
@@ -324,10 +348,10 @@
 
     </section>
 
-    <footer class="footer-text">
+    <!-- <footer class="footer-text">
         <h1>Sẽ update link tải game sau</h1>
         
-    </footer>
+    </footer> -->
 
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="./swiper-bundle.min.js"></script>
