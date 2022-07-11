@@ -100,7 +100,32 @@ const loadmore = document.querySelector('.button-loader');
         currentItems += 2;
 
         // Load more button will be hidden after list fully loaded
-        if (currentItems >= elementList.length) {
-            event.target.style.display = 'none';
-        }
-    })
+          if (currentItems >= elementList.length) {
+              loadmore.style.display = 'none';
+            
+          }
+        })
+
+
+//change image
+
+const imageMain = document.querySelector('.change-image')
+const imageChange = ['/image/imgContent3.jpg','/image/imgChange1.jpg','/image/imgChange2.jpg','/image/imgPubg.jpg']
+
+setInterval(function(){
+    var randomImage = Math.floor(Math.random() *4)
+    imageMain.src = imageChange[randomImage]
+},4000)
+
+//popup
+
+const openPopup = document.querySelector('.notifycation--box')
+const popUp = document.querySelector('.show-popup')
+const closePopup = document.querySelector('.close-show-content')
+openPopup.addEventListener('click',function(){
+    popUp.classList.toggle('active')
+})
+
+closePopup.addEventListener('click',function(){
+    popUp.classList.remove('active')
+})

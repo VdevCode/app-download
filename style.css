@@ -54,7 +54,6 @@ header{
     margin: auto;
     width: 100%;
     overflow: hidden;
-    
 }
 .nav{
     justify-content: space-between;
@@ -216,7 +215,7 @@ header{
     margin-bottom: 15px;
 }
 .menu--header-navbar a{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--text-color);
     font-weight: 500;
     transition: 0.5s;
@@ -225,7 +224,7 @@ header{
     border-bottom: 4px solid  var(--main-color);
     font-size: 1rem;
 }
-.bxs-hand{
+.bxs-bell-ring{
     animation: ring 1.3s cubic-bezier(0,0,.64,1.4) infinite;
 }
 
@@ -281,6 +280,71 @@ header{
     align-items: center;
     transition: 0.5s;
 }
+.show-popup{
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-color: rgb(0,0,0,0.3);
+    position: absolute;
+    opacity: 0;
+    position: fixed;
+}
+.show-popup.active{
+    opacity: 1;
+    z-index: 12;
+}
+.show-content-popup{
+    width: 80%;
+   
+    background: blueviolet;
+    margin: 0 auto;
+    margin-top: 40%;
+    border-radius: 4px;
+    text-align: center;
+}
+.close-show-content{
+    outline: none;
+    
+    padding: 4px;
+    margin-top: 10px;
+
+}
+.text-show-content{
+    padding: 10px;
+    
+}
+.text-show-content h1{
+    text-align: left;
+    font-size: 1rem;
+    border: 2px solid pink;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 300;
+    background: black;
+}
+.intro-text-show-content{
+    display: flex;
+    align-items: center;
+}
+.intro-text-show-content h2{
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-align: right;
+    margin-top: 15px;
+    color: rgb(98, 220, 241);
+    margin-right: 5px;
+}
+.intro-text-show-content h2 span{
+    color: white;
+}
+.intro-text-show-content .bx{
+    margin-top: 15px;
+    color: black;
+    font-size: 1.3rem;
+    
+}
 .notifycation--box:hover{
     background-color: rgb(75, 73, 73);
     color: black;
@@ -308,10 +372,10 @@ header{
     position: absolute;
     top: 100px;
     left: 20px;
-    background:  rgb(20, 20, 20);
+    background:  rgb(15, 9, 9);
     padding: 5px;
-    border-radius: 4px;
     
+    box-shadow: 0 0 5px #ec1a2b, 0 0 5px #f51e1e inset;
 }
 .date-sun{
     color: orange;
@@ -335,6 +399,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    z-index: 1;
 }
 .home-container img{
     border-radius: 5px;
@@ -361,20 +426,65 @@ header{
     
 }
 .text-btn{
-    background: var(--main-color);
-    padding: 15px;
-    color: var(--text-color);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 1rem;
-    font-weight: 500;
-    clip-path: polygon(0 0,100% 0%, 100% 100%,25% 100% , 0% 50%);
-    transition: 0.5s;
+    color: rgb(248, 233, 233);
+    font-weight: 800;
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+    border:none;
+    width: 130px;
+    line-height: 40px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+    letter-spacing: 0.2rem;
 }
-.text-btn:hover{
-    background-color: white;
-    color: black;
-}
+.text-btn span {
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    border: 1px solid #0bf4f3;
+    box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+    margin:0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+
+  .text-btn span:nth-child(1) {
+    box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+  }
+  .text-btn span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+  }
+  .text-btn:hover span:nth-child(1) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  .text-btn:hover span:nth-child(2) {
+    background: #000;
+    color: #000;
+    box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+  
 .trending-container{
     margin-top: 5px;
     padding: 0 10px;
@@ -577,6 +687,16 @@ header{
     overflow-y: scroll;
     overflow-x: hidden;
 }
+.table-ranked::-webkit-scrollbar-track{
+    background: rgb(121, 120, 120);
+}
+.table-ranked::-webkit-scrollbar{
+    width: 4px;
+}
+.table-ranked::-webkit-scrollbar-thumb{
+    background: yellow;
+    border-radius: 20px;
+}
 .ranked{
     padding: 0 10px;
 }
@@ -614,39 +734,32 @@ header{
 .full-scr{
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    margin-left: auto;
+    padding: 4px;
+    background: rgb(92, 91, 91);
+    border-radius: 3px;
 }
 .full-scr h1{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--main-color);
     margin-left: 4px;
 }
 .full-scr .bx{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: yellow;
 }
-@media (max-width:400px) {
-    .menu--header img{
-        display: none;
-    }
-    .menu--header-navbar{
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 80%;
-        
-    }
-}
+
 .load-more{
     text-align: center;
-    
+    z-index: 5;
     margin-bottom: 5px;
-   
+    position: relative;
     justify-content: center;
 }
 .button-loader{
     padding: 5px 10px;
     width: 50%;
+     z-index: 5;
     margin: auto;
     background: rgb(228, 36, 142);
     border-radius: 3px;
@@ -673,4 +786,23 @@ header{
 }
 .trending-container .bx-copy{
     color: rgb(15, 222, 236);
+}
+@media (max-width:400px) {
+    .menu--header img{
+        display: none;
+    }
+    .menu--header-navbar{
+       
+        
+        margin-left: auto;
+        margin-bottom: 80%;
+        
+    }
+    .menu--header-navbar a{
+        border-bottom: 2px solid yellow;
+    }
+    .home-container .change-image{
+        width: 100%;
+        
+    }
 }
