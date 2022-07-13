@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="/swiper-bundle.min.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/download.html">
@@ -28,7 +28,10 @@
                 <a href="/index.html" class="logo--header" >STORE<span>GAME</span></a>
                 
                 <div class="icon--header">
-                    <i class='bx bxs-bell bell--icon--header' id="bell-icon" ></i>
+                    <div class="">
+                        <span class="notify-bell-ring">.</span>
+                        <i class='bx bxs-bell bell--icon--header' id="bell-icon" ></i>
+                    </div>
                     <a href="/download.html"><i class='bx bxs-download download-icon--header'></i></a>
                     <div class="menu--icon--header">
                         <div class="line-header1"></div>
@@ -100,7 +103,7 @@
                                 <div class="trending--rating--download">
                                     <div class="rating">
                                         <i class='bx bxs-star'></i>
-                                        <span>4.7</span>
+                                        <span>4.2</span>
                                     </div>
                                     <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                                 </div>
@@ -117,7 +120,7 @@
                                 <div class="trending--rating--download">
                                     <div class="rating">
                                         <i class='bx bxs-star'></i>
-                                        <span>4.7</span>
+                                        <span>4.8</span>
                                     </div>
                                     <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                                 </div>
@@ -135,7 +138,7 @@
                             <div class="trending--rating--download">
                                 <div class="rating">
                                     <i class='bx bxs-star'></i>
-                                    <span>4.7</span>
+                                    <span>3.1</span>
                                 </div>
                                 <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                             </div>
@@ -152,7 +155,7 @@
                             <div class="trending--rating--download">
                                 <div class="rating">
                                     <i class='bx bxs-star'></i>
-                                    <span>4.7</span>
+                                    <span>4.8</span>
                                 </div>
                                 <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                             </div>
@@ -169,7 +172,7 @@
                             <div class="trending--rating--download">
                                 <div class="rating">
                                     <i class='bx bxs-star'></i>
-                                    <span>4.7</span>
+                                    <span>2.9</span>
                                 </div>
                                 <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                             </div>
@@ -186,7 +189,7 @@
                             <div class="trending--rating--download">
                                 <div class="rating">
                                     <i class='bx bxs-star'></i>
-                                    <span>4.7</span>
+                                    <span>4.0</span>
                                 </div>
                                 <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                             </div>
@@ -203,7 +206,7 @@
                             <div class="trending--rating--download">
                                 <div class="rating">
                                     <i class='bx bxs-star'></i>
-                                    <span>4.7</span>
+                                    <span>5.0</span>
                                 </div>
                                 <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                             </div>
@@ -250,7 +253,7 @@
                                 <div class="trending--rating--download">
                                     <div class="rating">
                                         <i class='bx bxs-star'></i>
-                                        <span>4.7</span>
+                                        <span>4.3</span>
                                     </div>
                                     <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                                 </div>
@@ -268,7 +271,7 @@
                             <div class="trending--rating--download">
                                 <div class="rating">
                                     <i class='bx bxs-star'></i>
-                                    <span>4.7</span>
+                                    <span>4.1</span>
                                 </div>
                                 <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                             </div>
@@ -285,7 +288,7 @@
                             <div class="trending--rating--download">
                                 <div class="rating">
                                     <i class='bx bxs-star'></i>
-                                    <span>4.7</span>
+                                    <span>4.9</span>
                                 </div>
                                 <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                             </div>
@@ -302,7 +305,7 @@
                             <div class="trending--rating--download">
                                 <div class="rating">
                                     <i class='bx bxs-star'></i>
-                                    <span>4.7</span>
+                                    <span>4.6</span>
                                 </div>
                                 <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                             </div>
@@ -336,7 +339,7 @@
                             <div class="trending--rating--download">
                                 <div class="rating">
                                     <i class='bx bxs-star'></i>
-                                    <span>4.7</span>
+                                    <span>4.8</span>
                                 </div>
                                 <a href="" class="trending--box-btn"><i class='bx bxs-download' ></i></a>
                             </div>
@@ -637,6 +640,130 @@
         </div>
     </div>
 
+    <!-- //box-comment || rating -->
+    <div class="tabs-page container">
+        <div class="tab-item active " onclick="changeCommentRating('comment',this)">
+            <h1>Bình Luận</h1>
+        </div>
+        <div class="tab-item "  onclick="changeCommentRating('rating',this)">
+            <h1>Đánh giá</h1>
+        </div>
+    </div>
+    <div class="hide-page container">
+        <div class="comment-box" id="comment">
+            <div class="img-comment-box">
+                <img src="./image/imgContent3.jpg" alt="">
+            </div>
+            <div class="comment-box-user">
+                <div class="">
+                    <h1>Name</h1>
+                     <input type="text" placeholder="your name" class="text-input-name" >
+                </div>
+                 <div class="email-comment-box">
+                    <h1>Email</h1>
+                     <input type="email" placeholder="your email" class="text-input-name" required>
+                </div>
+                <div class="input-user-comment-box">
+                    <h1>Comment</h1>
+                     <input type="text" placeholder="điều bạn muốn nói ..." >
+                </div>
+           </div>      
+        </div>
+        <div class="rating-box" style="display: none;" id="rating">
+            <div class="rating-box-chat">
+                <div class="avatar-rating">
+                    <img src="./image/imgAvatar1.png" alt="">
+                </div>
+                <div class="chat-rating">
+                    <h1>ghê thế em zai  </h1>
+                    <i class='bx bxs-like' ></i>
+                </div>
+                
+            </div>
+            <div class="rating-box-chat">
+                <div class="avatar-rating">
+                    <img src="./image/imgAvatar2.png" alt="">
+                </div>
+                <div class="chat-rating">
+                    <h1>oke web dc vl </h1>
+                    <i class='bx bxs-like' ></i>
+                </div>
+                
+            </div>
+            <div class="rating-box-chat">
+                <div class="avatar-rating">
+                    <img src="./image/imgAvatar3.png" alt="">
+                </div>
+                <div class="chat-rating">
+                    <h1>dc đấy,sau có mà ngàn đô $</h1>
+                    <i class='bx bxs-like' ></i>
+                </div>
+                
+            </div>
+            <div class="rating-box-chat">
+                <div class="avatar-rating">
+                    <img src="./image/imgAvatar9.gif" alt="">
+                </div>
+                <div class="chat-rating">
+                    <h1>ngon , nhiều chức năng</h1>
+                    <i class='bx bxs-like' ></i>
+                </div>
+                
+            </div>
+            <div class="rating-box-chat">
+                <div class="avatar-rating">
+                    <img src="./image/imgAvatar5.gif" alt="">
+                </div>
+                <div class="chat-rating">
+                    <h1>xịn xò đấy</h1>
+                    <i class='bx bxs-like' ></i>
+                </div>
+                
+            </div>
+            <div class="rating-box-chat">
+                <div class="avatar-rating">
+                    <img src="./image/imgAvatar6.gif" alt="">
+                </div>
+                <div class="chat-rating">
+                    <h1>cho luôn 2 like </h1>
+                    <i class='bx bxs-like' ></i>
+                </div>
+                
+            </div>
+            <div class="rating-box-chat">
+                <div class="avatar-rating">
+                    <img src="./image/imgAvatar7.jpg" alt="">
+                </div>
+                <div class="chat-rating">
+                    <h1>thằng này khá phết</h1>
+                    <i class='bx bxs-like' ></i>
+                </div>
+                
+            </div>
+            <div class="rating-box-chat">
+                <div class="avatar-rating">
+                    <img src="./image/imgAvatar10.gif" alt="">
+                    
+                </div>
+                <div class="chat-rating">
+                    <h1>cho offer luôn 1k $ âm phủ/tháng</h1>
+                    <i class='bx bxs-like' ></i>
+                </div>
+                
+            </div>
+            <div class="rating-box-chat">
+                <div class="avatar-rating">
+                    <img src="./image/imgAvatar8.jpg" alt="">
+                    <h1>Admin</h1>
+                </div>
+                <div class="chat-rating">
+                    <h1>youtube:vdevcode , anh em ủng hộ,đừng nghe lời mấy nhóc hôi sữa trên </h1>
+                    <i class='bx bxs-like' ></i>
+                </div>
+                
+            </div>
+        </div>
+    </div>
     <!-- <footer class="footer-text">
         <h1>Sẽ update link tải game sau</h1>
         
@@ -645,5 +772,6 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="./swiper-bundle.min.js"></script>
         <script src="./main.js"></script>
+     
 </body>
 </html>

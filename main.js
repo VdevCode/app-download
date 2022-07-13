@@ -129,3 +129,47 @@ openPopup.addEventListener('click',function(){
 closePopup.addEventListener('click',function(){
     popUp.classList.remove('active')
 })
+
+//hide notify-ring-bell
+
+const bellRing = document.querySelector('.bell--icon--header')
+const notifyRing = document.querySelector('.notify-bell-ring')
+
+bellRing.addEventListener('click',function(){
+    setTimeout(function(){
+      notifyRing.style.display = "none"
+    },2000)
+})
+
+
+//comment || rating
+
+
+function changeCommentRating(type,element){
+    let tabs = document.getElementsByClassName('tab-item')
+
+    for(i = 0 ; i < tabs.length;i++){
+        tabs[i].style.background = 'white'
+        tabs[i].style.color = 'black'
+    }
+
+    element.style.background = "black"
+    element.style.color = "white"
+   
+    document.getElementById(type).style.display = 'block'
+
+    switch(type){
+        case 'comment':
+          document.getElementById('rating').style.display = 'none'
+          break
+        case 'rating':
+          document.getElementById('comment').style.display = 'none'
+          break        
+    }
+}
+
+// const iconLike = document.querySelector('.bxs-like')
+
+// iconLike.addEventListener('click',function(){
+//     iconLike.style.color = 'red'
+// })

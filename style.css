@@ -108,6 +108,7 @@ header{
     position: relative;
     color: yellow;
     animation: ring 2s cubic-bezier(0,0,.64,1.4) infinite;
+    position: relative;
 }
 @keyframes ring {
     15% {
@@ -132,7 +133,7 @@ header{
       transform: rotate(0deg);
     }
   }
-.bell--icon--header::after{
+/* .bell--icon--header::after{
     content: "";
     width: 5px;
     height: 5px;
@@ -140,6 +141,15 @@ header{
     background: var(--main-color);
     position: absolute;
     right: 8px;
+} */
+.notify-bell-ring{
+    position: absolute;
+    font-size: 4rem;
+    top: -44px;
+    z-index: 1;
+    color: var(--main-color);
+    margin-left: 20px;
+    display: block;
 }
 .icon--header .download-icon--header{
     font-size: 1.4rem;
@@ -256,29 +266,30 @@ header{
     top: 110%;
     right: 15%;
     background: var(--light-color);
-    
     border-radius: 5px;
     flex-direction: column;
     row-gap: 1rem;
     align-items: center;
     clip-path: circle(0% at 100% 0%);
     padding: 5px;
+    
 }
 .notifycation.active{
     clip-path: circle(144% at 100% 0%);
     transition: 0.5s;
+    margin-left: 5%;
 }
 .notifycation--box{
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
-   
     padding: 10px;
     column-gap: 1rem;
     border-radius: 5px;
     background: var(--dark-color);
     align-items: center;
     transition: 0.5s;
+   
 }
 .show-popup{
     width: 100%;
@@ -563,9 +574,12 @@ header{
     font-weight: 400;
     font-size: 1rem;
     border: none;
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
-    color: var(--text-color)    ;
+    color: var(--main-color);
+    background: white;
+}
+.trending--box-btn .bx:hover{
+    background: black;
+    color: white;
 }
 .introduce-download {
     color: var(--main-color);
@@ -787,7 +801,141 @@ header{
 .trending-container .bx-copy{
     color: rgb(15, 222, 236);
 }
-@media (max-width:400px) {
+.tabs-page{
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    width:100%;
+    padding:0 10px;
+    position:relative;
+    z-index:1;
+    border-radius: 1px;
+}
+.tab-item{
+    background: white;
+   
+    color:black;
+    width: 100%; 
+    padding:4px;
+}
+.tab-item h1{
+    font-size: 1rem;
+}
+.tabs-page .active{
+    background: black;
+    color: white;
+}
+.hide-page{
+    width: 100%;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+.comment-box{
+    display: flex;
+    background: black;
+    width: 100%;
+}
+.comment-box-user{
+    margin-right:20px;
+    text-align: center;
+}
+.img-comment-box img{
+    width: 70%;
+    height: 50%;
+}
+.comment-box-user h1{
+    font-size: 1rem;
+    font-weight: 200;
+}
+.comment-box-user .text-input-name{
+    background: none;
+    border: 1px solid blue ;
+    padding: 5px 30px;
+    color: white;
+    outline:none;
+}
+.email-comment-box{
+    margin-top: 10px;
+}
+.input-user-comment-box{
+    margin-top: 10px;
+}
+.input-user-comment-box input{
+    background: none;
+    border: 1px solid blue ;
+    padding: 15px 30px;
+    color:wheat;
+    outline: none;
+    margin-bottom: 10px;
+}
+.rating-box{
+    background: black;
+    color: white;
+    overflow-y: scroll;
+    height: 221px;
+}
+.rating-box::-webkit-scrollbar-track{
+    background: rgb(121, 120, 120);
+     border-radius: 20px;
+}
+.rating-box::-webkit-scrollbar{
+    width: 4px;
+     border-radius: 20px;
+}
+.rating-box::-webkit-scrollbar-thumb{
+    background: rgb(230, 9, 9);
+    border-radius: 20px;
+}
+.rating-box-chat{
+    padding: 20px;
+    color: black;
+    
+    width: 90%;
+    margin:auto;
+    transform: translateY(10px);
+    display: flex;
+    align-items: center;
+}
+.avatar-rating img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+}
+.avatar-rating h1{
+    position: absolute;
+    color: red;
+    font-size: 0.7rem;
+    margin-left: 30px;
+    padding: 2px ;
+    border-radius: 4px;
+    border: 1px solid white;
+    background: white;
+    top: 5vh;
+}
+.chat-rating h1{
+    font-size: 1rem;
+    margin-left:20px;
+    color:white;
+    font-weight: 300;
+    padding: 10px;
+    border-bottom: 1px solid white;
+   
+    position: relative;
+    
+}
+.bxs-like{
+    color: white;
+    position: absolute;
+    right: 0;
+}
+.bxs-like:hover{
+    color: rgb(24, 136, 241);
+}
+@media (max-width:420px) {
     .menu--header img{
         display: none;
     }
@@ -804,5 +952,12 @@ header{
     .home-container .change-image{
         width: 100%;
         
+    }
+    .img-comment-box img{
+        display: none;
+    }
+    .comment-box-user{
+        text-align: center;
+        margin: 0 auto;
     }
 }
